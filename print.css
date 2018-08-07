@@ -10,6 +10,9 @@
     font-family: "Ubuntu", sans-serif;
     margin: 1.6cm;
   }
+  #return {
+    display:none;
+  }
   #experience {
     padding-top: 10px;
     width: 400px;

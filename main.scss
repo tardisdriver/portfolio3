@@ -77,6 +77,12 @@ footer {
 .nav-menu {
   height: 50px;
   background-color: black;
+  .nav {
+    @extend %flex-row;
+    justify-content:flex-end;
+    list-style:none;
+    height:50px;
+  }
   #cta {
     background-color: rgba(53, 170, 53, 0.5);
   }
@@ -109,7 +115,7 @@ footer {
 /* ---- Home Page ---- */
 .main-content {
   background-color: black;
-  height: auto;
+  height: 100%;
   .intro-container {
     display: flex;
     height: 60vh;
@@ -231,6 +237,60 @@ footer {
           .program {
             font-size: 0.8em;
           }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 700px) {
+  .nav-menu {
+    .nav{
+      .nav-item {
+        cursor:default;
+      }
+    }
+  }
+  .resume {
+    .resume-container {
+      #name {
+        padding-left:30px;
+      }
+      #page-wrapper {
+        display:flex;
+        #experience {
+          padding: 0px 35px;
+          h2 {
+            font-size: 2em;
+            padding-bottom:5px;
+            margin-bottom:0;
+            margin-top:10px;
+          }
+          .history {
+            .company {
+              padding-left:40px;
+            }
+            .title {
+              margin-bottom: 20px;
+              padding-top:5px;
+            }
+          }
+        }
+        #profile {
+          margin-top:10px;
+          width:88%;
+          box-shadow:4px 7px 10px grey;
+        }
+      }
+      #education {
+        padding: 0 35px 40px 35px;
+        h2 {
+          font-size: 2em;
+          padding-bottom:5px;
+          margin-bottom:0;
+          margin-top:0;
+        }
+        .school {
+            padding-left:40px;
         }
       }
     }
