@@ -1,0 +1,238 @@
+/* Font vars */
+$main-font: "Raleway", sans-serif;
+$secondary-font: "Montserrat", sans-serif;
+
+/* BG Color */
+@mixin background-gradient() {
+  background: #1e5799; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #1e5799 0%,
+    #2989d8 30%,
+    #000000 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #1e5799 0%,
+    #2989d8 30%,
+    #000000 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #1e5799 0%,
+    #2989d8 30%,
+    #000000 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+%main-formatting {
+  height: 100%;
+  margin: 0;
+}
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+%flex-row {
+  display: flex;
+  flex-direction: row;
+}
+%text-format {
+  padding-left: 30px;
+  padding-top: 5px;
+  font-size: 0.5em;
+  text-align: left;
+  padding-top: 0;
+  color: black;
+}
+/* ---- Global ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  @extend %main-formatting;
+  background-color: black;
+}
+body {
+  @extend %main-formatting;
+  @include background-gradient();
+  font-family: $main-font;
+  background-attachment: fixed;
+  background-repeat: none;
+}
+article {
+  min-height: 100%;
+  @extend %flex-column;
+  align-items: stretch;
+}
+main {
+  flex-grow: 1;
+}
+header,
+main,
+footer {
+  flex-shrink: 0;
+}
+.nav-menu {
+  height: 50px;
+  background-color: black;
+  #cta {
+    background-color: rgba(53, 170, 53, 0.5);
+  }
+  #cta:hover {
+    background-color: rgba(53, 170, 53, 1);
+    -webkit-transition: 0.5s ease;
+  }
+  .nav-item {
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.6em;
+  }
+  .nav-item:hover {
+    background-color: #1c2572;
+    -webkit-transition: 0.5s ease;
+  }
+}
+.logo {
+  width: 15%;
+  height: 15%;
+}
+#footer {
+  width: 100%;
+  text-align: center;
+  .copyright {
+    color: white;
+    font-size: 1em;
+  }
+}
+/* ---- Home Page ---- */
+.main-content {
+  background-color: black;
+  height: auto;
+  .intro-container {
+    display: flex;
+    height: 60vh;
+    #canvasOne {
+      z-index: 0;
+    }
+    .introduction {
+      background-color: black;
+      float: right;
+      color: white;
+      min-width: 23%;
+      text-align: center;
+      padding-right: 120px;
+      padding-top: 100px;
+      h2 {
+        font-size: 2.4em;
+      }
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+  }
+  .social {
+    margin-top: 10px;
+    .social-list {
+      @extend %flex-row;
+      clear: both;
+      justify-content: center;
+      list-style: none;
+      margin-bottom: 150px;
+      .social-btn {
+        width: 200px;
+        height: 50px;
+        font-size: 1.8em;
+        border: 0.5px solid black;
+        box-shadow: 0px 0px 10px #fff;
+        margin: 0 15px;
+        .fab {
+          padding-right: 16px;
+        }
+      }
+      #github {
+        background-color: black;
+      }
+    }
+  }
+}
+
+/* ---- Hire Page ---- */
+.main-content {
+  .contact {
+    text-align: center;
+    padding-top: 10px;
+    h2,
+    p {
+      color: white;
+      padding-top: 0;
+    }
+  }
+  .resume {
+    text-align: center;
+    @extend %flex-column;
+    align-items: center;
+    h2,
+    p {
+      color: white;
+      padding-top: 0px;
+    }
+    .resume-container {
+      margin-top: 10px;
+      border-radius: 3px;
+      align-self: center;
+      height: auto;
+      width: 85vw;
+      background-color: white;
+      #name {
+        font-family: $secondary-font;
+        text-align: left;
+        font-size: 3.5em;
+        font-weight: 700;
+        padding: 20px 20px 0 20px;
+        background-color: lightgray;
+        @extend %text-format;
+        .my-title {
+          @extend %text-format;
+        }
+      }
+      #page-wrapper {
+        display: flex;
+        #experience {
+          padding: 20px;
+          text-align: left;
+          h2,
+          h3 {
+            font-family: $main-font;
+            color: black;
+          }
+          h2 {
+            font-weight: 700;
+            margin-bottom: 0;
+          }
+          hr {
+            margin: 10px auto;
+          }
+        }
+        #education {
+          padding: 20px;
+          text-align: left;
+          h2 {
+            font-weight: 700;
+            margin-bottom: 0;
+          }
+          hr {
+            margin: 10px auto;
+          }
+          li {
+            margin-left: 40px;
+          }
+          .program {
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}
