@@ -8,9 +8,11 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,400i,700,700i" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="UI.js"></script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
+        <script src="popper.min.js"></script>
     <!-- Bootstrap Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -40,9 +42,18 @@
         <main>
             <div class="main-content">
                 <div class="contact">
-                    <h2>Contact Me</h2>
-                    <p>Email: stark.tracy@gmail.com</p>
-                </div>
+                        <h2>Contact Me</h2>
+                    <div class="contact-info">
+                        
+                        <p>Email: stark.tracy@gmail.com</p>
+                        <button class="btn" data-toggle="tooltip" data-placement="right" title="Copy Email"><i class="far fa-clipboard"></i></button>
+                        <!-- <div class="tooltip">
+                                <p>Copy Email</p>
+                            </div> -->
+                        </div>
+                    
+                    </div>
+                
                 <div class="resume">
                     <h2>Resume</h2>
                     <button class="btn btn-success" onclick=window.location.href="resume.html">Print My Resume</button>

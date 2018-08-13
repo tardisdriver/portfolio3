@@ -108,7 +108,7 @@ footer {
 /* ---- Home Page ---- */
 .main-content {
   background-color: black;
-  height: auto;
+  height: 100%;
 }
 .main-content .intro-container {
   display: flex;
@@ -229,6 +229,23 @@ footer {
 }
 
 @media only screen and (min-width: 700px) {
+  .nav-menu .nav .nav-item {
+    cursor: default;
+  }
+
+  .main-content .contact .contact-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .main-content .contact p {
+    margin: 3px 10px;
+  }
+  .main-content .contact button {
+    display: inline-block;
+    border-radius: 5px;
+  }
+
   .resume .resume-container #name {
     padding-left: 30px;
   }
