@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,400i,700,700i" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
     <script src="UI.js"></script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
@@ -45,11 +46,8 @@
                         <h2>Contact Me</h2>
                     <div class="contact-info">
                         
-                        <p>Email: stark.tracy@gmail.com</p>
-                        <button class="btn" data-toggle="tooltip" data-placement="right" title="Copy Email"><i class="far fa-clipboard"></i></button>
-                        <!-- <div class="tooltip">
-                                <p>Copy Email</p>
-                            </div> -->
+                        <p id="my-email">Email: stark.tracy@gmail.com</p>
+                        <button id="cp-btn" class="btn" data-clipboard-text="stark.tracy@gmail.com" data-toggle="tooltip" data-placement="right" title="Copy Email"><i class="far fa-clipboard"></i></button>
                         </div>
                     
                     </div>
@@ -197,6 +195,15 @@
             </div>
         </footer>
     </article>
+    <script>
+            var clipboard = new ClipboardJS('.cp-btn');
+            clipboard.on('success', function(e) {
+                console.log(e);
+            });
+            clipboard.on('error', function(e) {
+                console.log(e);
+            });
+            </script>
 </body>
 
 </html>
