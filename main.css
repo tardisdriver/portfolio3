@@ -65,6 +65,11 @@ footer {
   flex-shrink: 0;
 }
 
+button a {
+  text-decoration: none;
+  color: white;
+}
+
 .nav-menu {
   height: 50px;
   background-color: black;
@@ -233,6 +238,7 @@ footer {
     cursor: default;
   }
 
+<<<<<<< Updated upstream
   .main-content .contact .contact-info {
     display: flex;
     flex-direction: row;
@@ -246,6 +252,8 @@ footer {
     border-radius: 5px;
   }
 
+=======
+>>>>>>> Stashed changes
   .resume .resume-container #name {
     padding-left: 30px;
   }
