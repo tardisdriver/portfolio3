@@ -20,7 +20,6 @@ body, html {
   padding-top: 5px;
   font-size: 0.5em;
   text-align: left;
-  padding-top: 0;
   color: black;
 }
 
@@ -199,6 +198,23 @@ button a {
 .main-content .resume .resume-container #page-wrapper {
   display: flex;
 }
+.main-content .resume .resume-container #page-wrapper #profile {
+  padding: 0px;
+  background-color: lightgray;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+.main-content .resume .resume-container #page-wrapper #profile #col-2 {
+  width: 400px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.main-content .resume .resume-container #page-wrapper #profile #col-2 li {
+  line-height: 1.5em;
+  float: left;
+  width: 49%;
+  text-align: left;
+}
 .main-content .resume .resume-container #page-wrapper #experience {
   padding: 20px;
   text-align: left;
@@ -238,7 +254,6 @@ button a {
     cursor: default;
   }
 
-<<<<<<< Updated upstream
   .main-content .contact .contact-info {
     display: flex;
     flex-direction: row;
@@ -249,11 +264,13 @@ button a {
   }
   .main-content .contact button {
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 0 6px;
   }
 
-=======
->>>>>>> Stashed changes
+  .resume .resume-container {
+    height: 1010px;
+    border-radius: 0;
+  }
   .resume .resume-container #name {
     padding-left: 30px;
   }
@@ -273,24 +290,38 @@ button a {
     padding-left: 40px;
   }
   .resume .resume-container #page-wrapper #experience .history .title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding-top: 5px;
+    color: black;
+    font-weight: 700;
+    text-align: center;
   }
   .resume .resume-container #page-wrapper #profile {
-    margin-top: 10px;
-    width: 88%;
+    margin-top: 5px;
+    width: 45%;
     box-shadow: 4px 7px 10px grey;
   }
-  .resume .resume-container #education {
+  .resume .resume-container #page-wrapper #profile h2 {
+    font-weight: 700;
+    color: black;
+  }
+  .resume .resume-container #page-wrapper #profile p {
+    color: black;
+  }
+  .resume .resume-section {
+    background-color: white;
+  }
+  .resume .resume-section #education {
     padding: 0 35px 40px 35px;
   }
-  .resume .resume-container #education h2 {
+  .resume .resume-section #education h2 {
     font-size: 2em;
     padding-bottom: 5px;
     margin-bottom: 0;
     margin-top: 0;
+    color: black;
   }
-  .resume .resume-container #education .school {
+  .resume .resume-section #education .school {
     padding-left: 40px;
   }
 }

@@ -13,7 +13,7 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-        <script src="popper.min.js"></script>
+    <script src="popper.min.js"></script>
     <!-- Bootstrap Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -43,15 +43,18 @@
         <main>
             <div class="main-content">
                 <div class="contact">
-                        <h2>Contact Me</h2>
+                    <h2>Contact Me</h2>
                     <div class="contact-info">
-                        
+
                         <p id="my-email">Email: stark.tracy@gmail.com</p>
-                        <button id="cp-btn" class="btn" data-clipboard-text="stark.tracy@gmail.com" data-toggle="tooltip" data-placement="right" title="Copy Email"><i class="far fa-clipboard"></i></button>
-                        </div>
-                    
+                        <button id="cp-btn" class="btn" data-clipboard-text="stark.tracy@gmail.com" data-toggle="tooltip" data-placement="right"
+                            title="Copy Email">
+                            <i class="far fa-clipboard"></i>
+                        </button>
                     </div>
-                
+
+                </div>
+
                 <div class="resume">
                     <h2>Resume</h2>
                     <button class="btn btn-success" onclick=window.location.href="resume.html">Print My Resume</button>
@@ -61,8 +64,8 @@
                             <p class="my-title">Web Developer</p>
                             <hr />
                         </div>
-                        <div id="page-wrapper">
-                            <section>
+                        <section>
+                            <div id="page-wrapper">
                                 <div id="experience">
                                     <h2>Experience</h2>
                                     <div class="history">
@@ -76,7 +79,7 @@
                                             <li>Assisted with and suggested on-page SEO tactics</li>
                                             <li>Personally revamped the mobile website UX/UI</li>
                                             <li>Four-month contract intended to get the new website ready for delivery</li>
-                                            <li>Technologies utilized: JavaScript, jQuery, CSS, Sass, Git</li>
+                                            <li>Technologies utilized: JavaScript, jQuery, CSS, Less, Git</li>
                                         </ul>
                                     </div>
                                     <div class="history">
@@ -101,7 +104,8 @@
                                         <ul>
                                             <li>Selected for a volunteer lead position at a non-profit orginazation</li>
                                             <li>Managed a team consisting of an assistant web lead, a graphics designer, and
-                                                a JavaScript developer</li>
+                                                a JavaScript developer
+                                            </li>
                                             <li>Completed overhaul of organization's website to a simpler UI that was more user-friendly,
                                                 initially using pure HTML5 and then transitioning to the Concrete5 CMS</li>
                                             <li>Surveys of the community indicated a very positive reaction to the new website
@@ -116,13 +120,12 @@
                                         </h3>
                                         <ul>
                                             <li>Highly technical MOS requiring knowledge and training in computer programming
-                                                and electronics</li>
+                                                and electronics
+                                            </li>
                                             <li>Honorably Discharged</li>
                                         </ul>
                                     </div>
                                 </div>
-                            </section>
-                            <section>
                                 <div id="profile">
                                     <h2>Profile</h2>
                                     <hr />
@@ -143,9 +146,12 @@
                                     <ul id="col-2">
                                         <li>JavaScript (ES6/ES2015)</li>
                                         <li>React</li>
-                                        <li>Git</li>
+
                                         <li>HTML5</li>
                                         <li>CSS3</li>
+                                        <li>Sass</li>
+                                        <li>Less</li>
+                                        <li>Git</li>
                                         <li>Adobe Photoshop</li>
                                         <li>Adobe Illustrator</li>
                                         <li>jQuery</li>
@@ -161,9 +167,9 @@
                                         <li>Babel</li>
                                     </ul>
                                 </div>
-                            </section>
+                        </section>
                         </div>
-                        <section>
+                        <section class="resume-section">
                             <div id="education">
                                 <h2>Education</h2>
                                 <hr />
@@ -196,14 +202,14 @@
         </footer>
     </article>
     <script>
-            var clipboard = new ClipboardJS('.cp-btn');
-            clipboard.on('success', function(e) {
-                console.log(e);
-            });
-            clipboard.on('error', function(e) {
-                console.log(e);
-            });
-            </script>
+        var clipboard = new ClipboardJS('.cp-btn');
+        clipboard.on('success', function (e) {
+            console.log(e);
+        });
+        clipboard.on('error', function (e) {
+            console.log(e);
+        });
+    </script>
 </body>
 
 </html>
