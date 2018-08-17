@@ -296,6 +296,62 @@ button a {
     border-radius: 6px;
     padding: 0 6px;
   }
+  .main-content h2 {
+    color: white;
+    padding: 15px;
+  }
+  .main-content .project {
+    height: 450px;
+    color: white;
+    margin: 0 0 0 70px;
+  }
+  .main-content .project .project-area {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main-content .project .project-area .project-left {
+    display: flex;
+    flex-direction: column;
+    max-width: 33%;
+    height: 300px;
+    align-items: center;
+  }
+  .main-content .project .project-area .project-left .thumbnail {
+    width: 100%;
+  }
+  .main-content .project .project-area .project-left .proj-button {
+    background-color: #015152;
+    width: 255px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .main-content .project .project-area .project-left .proj-button:hover {
+    background-color: #029597;
+  }
+  .main-content .project .project-area .project-left a {
+    color: white;
+    text-decoration: none;
+  }
+  .main-content .project .project-area .project-left a:visited {
+    color: white;
+  }
+  .main-content .project .project-right {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    max-width: 40%;
+    margin-left: 100px;
+    padding-top: 40px;
+  }
+  .main-content .project .project-right .stack {
+    padding-top: 35px;
+  }
+  .main-content .project .project-right .stack .btn {
+    padding: 2px 4px;
+  }
 
   .resume .resume-container {
     height: 1010px;
