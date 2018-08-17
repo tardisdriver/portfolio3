@@ -109,7 +109,6 @@ button a {
   font-size: 1em;
 }
 
-/* ---- Home Page ---- */
 .main-content {
   background-color: black;
   height: 100%;
@@ -181,7 +180,6 @@ button a {
 }
 .main-content .resume .resume-container {
   margin-top: 10px;
-  border-radius: 3px;
   align-self: center;
   height: auto;
   width: 85vw;
@@ -248,6 +246,37 @@ button a {
 .main-content .resume .resume-container #page-wrapper #education .program {
   font-size: 0.8em;
 }
+.main-content .about-me {
+  color: white;
+  padding: 50px;
+  font-size: 1.3em;
+  margin: 0 100px;
+}
+.main-content .about-me .about-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+.main-content .about-me figure .figure-caption {
+  font-size: 0.75em;
+  padding-top: 5px;
+  color: lightgray;
+  font-style: italic;
+}
+.main-content #headshot {
+  display: block;
+  margin-right: 10%;
+  margin-left: 15px;
+  margin-top: 100px;
+  width: 15%;
+  border-radius: 250px;
+  float: right;
+  clear: both;
+}
+.main-content p {
+  padding-top: 17px;
+}
 
 @media only screen and (min-width: 700px) {
   .nav-menu .nav .nav-item {
@@ -264,12 +293,16 @@ button a {
   }
   .main-content .contact button {
     display: inline-block;
-    border-radius: 0 6px;
+    border-radius: 6px;
+    padding: 0 6px;
   }
 
   .resume .resume-container {
     height: 1010px;
     border-radius: 0;
+  }
+  .resume .resume-container .top-resume-section {
+    height: 839px;
   }
   .resume .resume-container #name {
     padding-left: 30px;
@@ -288,6 +321,7 @@ button a {
   }
   .resume .resume-container #page-wrapper #experience .history .company {
     padding-left: 40px;
+    font-style: italic;
   }
   .resume .resume-container #page-wrapper #experience .history .title {
     margin-bottom: 10px;
@@ -308,21 +342,31 @@ button a {
   .resume .resume-container #page-wrapper #profile p {
     color: black;
   }
-  .resume .resume-section {
+  .resume .bottom-resume-section {
+    width: 86%;
     background-color: white;
   }
-  .resume .resume-section #education {
+  .resume .bottom-resume-section #education {
     padding: 0 35px 40px 35px;
+    text-align: left;
   }
-  .resume .resume-section #education h2 {
+  .resume .bottom-resume-section #education h2 {
     font-size: 2em;
+    font-weight: 700;
     padding-bottom: 5px;
     margin-bottom: 0;
     margin-top: 0;
     color: black;
   }
-  .resume .resume-section #education .school {
+  .resume .bottom-resume-section #education h3 .program {
+    font-style: italic;
+  }
+  .resume .bottom-resume-section #education .school {
     padding-left: 40px;
+    color: black;
+  }
+  .resume .bottom-resume-section #education ul {
+    padding-left: 60px;
   }
 }
 
