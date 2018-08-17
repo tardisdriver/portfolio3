@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,400i,700,700i" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-    <script src="UI.js"></script>
+    <script src="js/UI.js"></script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
@@ -22,10 +22,8 @@
     <!-- Bootstrap Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <!-- <script src="modernizr-2.0.6.js"></script>
-    <script src="sphere-render.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 
 <body>
@@ -41,7 +39,7 @@
                     </ul>
                 </div>
             </nav>
-            <img class="logo" src="color_logo_transparent.svg" onclick=window.location.href="index.html" />
+            <img class="logo" src="images/color_logo_transparent.svg" onclick=window.location.href="index.html" />
         </header>
         <main>
             <div class="main-content">
@@ -60,7 +58,10 @@
 
                 <div class="resume">
                     <h2>Resume</h2>
-                    <button class="btn btn-success" onclick=window.location.href="resume.html">Print My Resume</button>
+                    <div id="res-buttons">
+                        <button class="btn btn-success" onclick=window.location.href="resume.html">Print My Resume</button>
+                        <button class="btn btn-success" onclick=window.location.href="resume.html">Download My Resume</button>
+                    </div>
                     <div class="resume-container">
                         <div id="name">
                             <span>Tracy Stark</span>
