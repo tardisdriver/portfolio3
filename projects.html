@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,400i,700,700i" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-    <script src="UI.js"></script>
+
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
@@ -22,10 +22,8 @@
     <!-- Bootstrap Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <!-- <script src="modernizr-2.0.6.js"></script>
-    <script src="sphere-render.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
 
 <body>
@@ -41,11 +39,11 @@
                     </ul>
                 </div>
             </nav>
-            <img class="logo" src="color_logo_transparent.svg" onclick=window.location.href="index.html" />
+            <img class="logo" src="images/color_logo_transparent.svg" onclick=window.location.href="index.html" />
         </header>
         <main>
             <div class="main-content">
-                <h2>Projects</h2>
+                <h2 class="page-header">Projects</h2>
                 <div class="project">
                     <h3>SHRUB - The tech support chat bot</h3>
                     <div class="project-area">
@@ -53,14 +51,15 @@
                             <img class="thumbnail" src="images/shrub-cap.png" alt="SHRUB Project Thumbnail" onClick="location.href='https://shrub.netlify.com';"
                             />
                             <a href='https://shrub.netlify.com' class='proj-button' target='_blank'>Live Demo</a>
-                            <a href='https://github.com/tardisdriver/cust-support-ai-chat-FE' id='github-btn' class='proj-button' target="_blank">Check this out on GitHub</a>
+                            <a href='https://github.com/tardisdriver/cust-support-ai-chat-FE' id='github-btn' class='proj-button' target="_blank">Check
+                                this out on GitHub</a>
                         </div>
 
                         <div class="project-right">
-                            <span>SHRUB stands for Support Helper Utility Responsive Bot. She is intended to sit between consumers
-                                and human tech support for a computer company and handle frequently asked questions in an
-                                intelligent way. She uses IBM Watson Conversation and Discovery APIs, and thus is still currently
-                                learning how to do her job!</span>
+                            <span>SHRUB stands for Support Helper Utility Responsive Bot. She is intended to sit between
+                                consumers and human tech support for a computer company and handle frequently asked questions
+                                in an intelligent way. She uses IBM Watson Conversation and Discovery APIs, and thus is still
+                                currently learning how to do her job!</span>
                             <div class="stack">
                                 <span>Stack used: </span>
                                 <span class="btn btn-primary">React</span>
@@ -77,15 +76,18 @@
                         <div class="project-left">
                             <img class="thumbnail" src="images/travel-cap.png" alt="Travel Buddy Project Thumbnail" onClick="location.href='https://app-travel-buddy.herokuapp.com/';"
                             />
-                            <a href="https://app-travel-buddy.herokuapp.com/" id="demo-btn" class='proj-button' target="_blank">Live Demo</a>
-                            <a href="https://github.com/tardisdriver/travel_capstone" id="github-btn" class="proj-button" target="_blank">Check this out on GitHub</a>
+                            <a href="https://app-travel-buddy.herokuapp.com/" id="demo-btn" class='proj-button' target="_blank">Live
+                                Demo
+                            </a>
+                            <a href="https://github.com/tardisdriver/travel_capstone" id="github-btn" class="proj-button" target="_blank">Check
+                                this out on GitHub</a>
                         </div>
 
                         <div class="project-right">
-                            <span>Travel Buddy easily stores your travel budget information locally through your browser, or if
-                                you'd like to access your trip information on multiple devices, you can also save your progress
-                                to the server. This project was a proof-of-concept for me; I was testing saving information
-                                to the browser cache and then moving it to database storage upon user request.</span>
+                            <span>Travel Buddy easily stores your travel budget information locally through your browser,
+                                or if you'd like to access your trip information on multiple devices, you can also save your
+                                progress to the server. This project was a proof-of-concept for me; I was testing saving
+                                information to the browser cache and then moving it to database storage upon user request.</span>
                             <div class="stack">
                                 <span>Stack used: </span>
                                 <span class="btn btn-primary">HTML</span>
@@ -103,14 +105,17 @@
                         <div class="project-left">
                             <img class="thumbnail" src="images/beer-cap.png" alt="Dinner and a Beer Project Thumbnail" onClick="location.href='http://dinner-and-a-beer.netlify.com/';"
                             />
-                            <a href="http://dinner-and-a-beer.netlify.com/" id="demo-btn" id="demo-btn" class='proj-button' target="_blank">Live Demo</a>
-                            <a href="https://github.com/tardisdriver/dinner_and_a_beer" id="github-btn" class="proj-button" target="_blank">Check this out on GitHub</a>
+                            <a href="http://dinner-and-a-beer.netlify.com/" id="demo-btn" id="demo-btn" class='proj-button' target="_blank">Live
+                                Demo
+                            </a>
+                            <a href="https://github.com/tardisdriver/dinner_and_a_beer" id="github-btn" class="proj-button" target="_blank">Check
+                                this out on GitHub</a>
                         </div>
 
                         <div class="project-right">
-                            <span>Dinner and a Beer allows the user to select which protein/entree type they'd like, and the app
-                                will suggest a random beer in a style that matches the recipe. Perfect for indecisive beer
-                                lovers looking to try new brews.
+                            <span>Dinner and a Beer allows the user to select which protein/entree type they'd like, and
+                                the app will suggest a random beer in a style that matches the recipe. Perfect for indecisive
+                                beer lovers looking to try new brews.
                                 <u>Please note:</u> this project is using free-tier APIs and thus can reach its request limits
                                 very quickly. If you're having trouble with the app, please try again later.
                             </span>
@@ -127,28 +132,14 @@
                 </div>
             </div>
         </main>
+        <footer>
+            <div id="footer">
+                <span class="copyright">
+                    <i class="far fa-copyright"></i>2018 Stark Web Concepts</span>
+            </div>
+        </footer>
     </article>
+    <script src="js/UI.js"></script>
 </body>
 
 </html>
-
-<!-- <div id="project-list">
-                    <h2>Projects</h2>
-                    <div class="project">
-                        <h3>SHRUB - The tech support chat bot</h3>
-                        <div class="project-info">
-                            <img class="thumbnail" src="images/shrub-cap.png" alt="SHRUB Project Thumbnail" onClick="location.href='https://shrub.netlify.com';"
-                            />
-                            <a href='https://shrub.netlify.com' class='proj-button' target='_blank'>Live Demo</a>
-                            <a href='https://github.com/tardisdriver/cust-support-ai-chat-FE' id='github-btn' class='proj-button' target="_blank">Check this out on GitHub</a>
-                        </div>
-                        <div class="description">
-                            <span>SHRUB stands for Support Helper Utility Responsive Bot. She is intended to sit between consumers
-                                and human tech support for a computer company and handle frequently asked questions in an
-                                intelligent way. She uses IBM Watson Conversation and Discovery APIs, and thus is still currently
-                                learning how to do her job!</span>
-                        </div>
-                        <div class="stack">
-                            <span>Stack used: ReactJS, NodeJS, MongoDB, Watson APIs</span>
-                        </div>
-                    </div> -->

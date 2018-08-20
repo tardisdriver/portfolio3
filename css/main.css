@@ -70,13 +70,11 @@ button a {
 }
 
 .nav-menu {
-  height: 50px;
+  font-size: 0.8rem;
   background-color: black;
 }
 .nav-menu .nav {
-  justify-content: flex-end;
   list-style: none;
-  height: 50px;
 }
 .nav-menu #cta {
   background-color: rgba(53, 170, 53, 0.5);
@@ -96,8 +94,7 @@ button a {
 }
 
 .logo {
-  width: 15%;
-  height: 15%;
+  width: 13rem;
 }
 
 #footer {
@@ -118,45 +115,109 @@ button a {
   height: 60vh;
 }
 .main-content .intro-container #canvasOne {
-  z-index: 0;
+  display: none;
 }
 .main-content .intro-container .introduction {
   background-color: black;
-  float: right;
   color: white;
-  min-width: 23%;
   text-align: center;
-  padding-right: 120px;
-  padding-top: 100px;
+  padding-top: 5rem;
 }
 .main-content .intro-container .introduction h2 {
-  font-size: 2.4em;
+  font-size: 2.4rem;
 }
 .main-content .intro-container .introduction h3 {
-  font-size: 1.5em;
-}
-.main-content .social {
-  margin-top: 10px;
+  font-size: 1.5rem;
 }
 .main-content .social .social-list {
   clear: both;
   justify-content: center;
   list-style: none;
-  margin-bottom: 150px;
+  flex-wrap: wrap;
+  padding: 0;
 }
 .main-content .social .social-list .social-btn {
-  width: 200px;
-  height: 50px;
-  font-size: 1.8em;
+  width: 15rem;
+  font-size: 1.8rem;
   border: 0.5px solid black;
   box-shadow: 0px 0px 10px #fff;
-  margin: 0 15px;
+  margin: 4px;
 }
 .main-content .social .social-list .social-btn .fab {
   padding-right: 16px;
 }
 .main-content .social .social-list #github {
   background-color: black;
+}
+
+/* ---- Project Page ----*/
+.main-content {
+  margin-bottom: 10px;
+}
+.main-content .page-header {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  padding: 10px;
+}
+.main-content .project {
+  color: white;
+  margin: 0 0 0 2rem;
+}
+.main-content .project h3 {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.main-content .project .project-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-content .project .project-area .project-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  align-items: center;
+}
+.main-content .project .project-area .project-left .thumbnail {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.main-content .project .project-area .project-left .proj-button {
+  background-color: #015152;
+  width: 14rem;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  font-size: 0.7em;
+  text-align: center;
+  padding: 5px 0;
+}
+.main-content .project .project-area .project-left .proj-button:hover {
+  background-color: #029597;
+}
+.main-content .project .project-area .project-left a {
+  color: white;
+  text-decoration: none;
+}
+.main-content .project .project-area .project-left a:visited {
+  color: white;
+}
+.main-content .project .project-right {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  padding-top: 4px;
+}
+.main-content .project .project-right span {
+  font-size: 1rem;
+}
+.main-content .project .project-right .stack {
+  padding-top: 10px;
+  font-size: 1.2rem;
+}
+.main-content .project .project-right .stack span.btn {
+  padding: 2px 3px;
+  font-size: 0.9rem;
 }
 
 /* ---- Hire Page ---- */
@@ -169,6 +230,44 @@ button a {
   color: white;
   padding-top: 0;
 }
+.main-content .contact h2 {
+  font-size: 2rem;
+}
+.main-content .contact .contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.main-content .contact .contact-info #my-email {
+  height: 1.4rem;
+}
+.main-content .contact .contact-info #cp-btn {
+  padding: 0 0.7rem;
+  font-size: 1rem;
+  margin-left: 5px;
+}
+.main-content .contact .contact-info .tooltip {
+  margin: 0;
+}
+.main-content .contact .contact-info .tooltip .tooltip-arrow {
+  display: none;
+}
+.main-content .contact .contact-info .tooltip .tooltip-inner {
+  background-color: #767676;
+  padding: 5px 3px;
+  font-size: 0.9rem;
+}
+.main-content .contact .avail {
+  padding-top: 15px;
+}
+.main-content .contact .avail ul {
+  text-align: left;
+  padding-left: 20px;
+}
+.main-content .contact .avail ul li {
+  font-size: 1rem;
+  color: white;
+}
 .main-content .resume {
   text-align: center;
   align-items: center;
@@ -178,29 +277,34 @@ button a {
   color: white;
   padding-top: 0px;
 }
+.main-content .resume h2 {
+  font-size: 2rem;
+}
 .main-content .resume .resume-container {
   margin-top: 10px;
   align-self: center;
   height: auto;
-  width: 85vw;
+  width: 31rem;
   background-color: white;
 }
 .main-content .resume .resume-container #name {
   font-family: "Montserrat", sans-serif;
   text-align: left;
-  font-size: 3.5em;
+  font-size: 2.5rem;
   font-weight: 700;
-  padding: 20px 20px 0 20px;
+  padding: 1rem 0 0 1rem;
   background-color: lightgray;
 }
 .main-content .resume .resume-container #page-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 .main-content .resume .resume-container #page-wrapper #profile {
-  padding: 0px;
-  background-color: lightgray;
-  margin: 0 10px;
-  border-radius: 5px;
+  display: none;
+}
+.main-content .resume .resume-container #page-wrapper #profile h2 {
+  color: black;
+  font-size: 2rem;
 }
 .main-content .resume .resume-container #page-wrapper #profile #col-2 {
   width: 400px;
@@ -214,7 +318,7 @@ button a {
   text-align: left;
 }
 .main-content .resume .resume-container #page-wrapper #experience {
-  padding: 20px;
+  padding: 0 1.4rem;
   text-align: left;
 }
 .main-content .resume .resume-container #page-wrapper #experience h2,
@@ -225,38 +329,76 @@ button a {
 .main-content .resume .resume-container #page-wrapper #experience h2 {
   font-weight: 700;
   margin-bottom: 0;
+  margin-top: 0;
+  font-size: 2rem;
 }
 .main-content .resume .resume-container #page-wrapper #experience hr {
   margin: 10px auto;
 }
-.main-content .resume .resume-container #page-wrapper #education {
+.main-content .resume .resume-container #page-wrapper #experience .history h3 {
+  font-size: 1rem;
+}
+.main-content .resume .resume-container #page-wrapper #experience .history h3 p {
+  font-size: 1.7rem;
+  text-align: center;
+}
+.main-content .resume .resume-container #page-wrapper #experience .history ul {
+  font-size: 1rem;
+  padding-left: 2rem;
+}
+.main-content .resume .resume-container #page-wrapper #experience .history span,
+.main-content .resume .resume-container #page-wrapper #experience .history p {
+  color: black;
+}
+.main-content .resume .bottom-resume-section {
+  background-color: white;
+  margin-top: 0;
+}
+.main-content .resume .bottom-resume-section #education {
   padding: 20px;
   text-align: left;
 }
-.main-content .resume .resume-container #page-wrapper #education h2 {
+.main-content .resume .bottom-resume-section #education h2 {
   font-weight: 700;
   margin-bottom: 0;
+  color: black;
+  font-size: 2rem;
+  margin-top: 0;
 }
-.main-content .resume .resume-container #page-wrapper #education hr {
-  margin: 10px auto;
+.main-content .resume .bottom-resume-section #education h3 {
+  font-size: 1.4rem;
 }
-.main-content .resume .resume-container #page-wrapper #education li {
-  margin-left: 40px;
+.main-content .resume .bottom-resume-section #education .school {
+  color: black;
+  font-size: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 3px;
 }
-.main-content .resume .resume-container #page-wrapper #education .program {
+.main-content .resume .bottom-resume-section #education hr {
+  display: none;
+}
+.main-content .resume .bottom-resume-section #education ul {
+  margin-left: 2rem;
+}
+.main-content .resume .bottom-resume-section #education ul li {
+  font-size: 1rem;
+}
+.main-content .resume .bottom-resume-section #education .program {
   font-size: 0.8em;
 }
 .main-content .about-me {
   color: white;
-  padding: 50px;
-  font-size: 1.3em;
-  margin: 0 100px;
+  font-size: 1.3rem;
+  padding: 3rem;
+}
+.main-content .about-me h2 {
+  font-size: 2rem;
 }
 .main-content .about-me .about-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 26rem;
 }
 .main-content .about-me figure .figure-caption {
   font-size: 0.75em;
@@ -266,167 +408,16 @@ button a {
 }
 .main-content #headshot {
   display: block;
-  margin-right: 10%;
+  margin-right: 4rem;
   margin-left: 15px;
-  margin-top: 100px;
-  width: 15%;
+  margin-top: 12rem;
+  width: 12rem;
   border-radius: 250px;
   float: right;
   clear: both;
 }
 .main-content p {
   padding-top: 17px;
-}
-
-@media only screen and (min-width: 700px) {
-  .nav-menu .nav .nav-item {
-    cursor: default;
-  }
-
-  .main-content .contact .contact-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .main-content .contact p {
-    margin: 3px 10px;
-  }
-  .main-content .contact button {
-    display: inline-block;
-    border-radius: 6px;
-    padding: 0 6px;
-  }
-  .main-content h2 {
-    color: white;
-    padding: 15px;
-  }
-  .main-content .project {
-    height: 450px;
-    color: white;
-    margin: 0 0 0 70px;
-  }
-  .main-content .project .project-area {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .main-content .project .project-area .project-left {
-    display: flex;
-    flex-direction: column;
-    max-width: 33%;
-    height: 300px;
-    align-items: center;
-  }
-  .main-content .project .project-area .project-left .thumbnail {
-    width: 100%;
-  }
-  .main-content .project .project-area .project-left .proj-button {
-    background-color: #015152;
-    width: 255px;
-    margin-bottom: 8px;
-    border-radius: 3px;
-    font-size: 1.3em;
-    text-align: center;
-    padding: 5px 0;
-  }
-  .main-content .project .project-area .project-left .proj-button:hover {
-    background-color: #029597;
-  }
-  .main-content .project .project-area .project-left a {
-    color: white;
-    text-decoration: none;
-  }
-  .main-content .project .project-area .project-left a:visited {
-    color: white;
-  }
-  .main-content .project .project-right {
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    max-width: 40%;
-    margin-left: 100px;
-    padding-top: 40px;
-  }
-  .main-content .project .project-right .stack {
-    padding-top: 35px;
-  }
-  .main-content .project .project-right .stack .btn {
-    padding: 2px 4px;
-  }
-
-  .resume .res-buttons {
-    display: flex;
-  }
-  .resume .resume-container {
-    height: 1010px;
-    border-radius: 0;
-  }
-  .resume .resume-container .top-resume-section {
-    height: 839px;
-  }
-  .resume .resume-container #name {
-    padding-left: 30px;
-  }
-  .resume .resume-container #page-wrapper {
-    display: flex;
-  }
-  .resume .resume-container #page-wrapper #experience {
-    padding: 0px 35px;
-  }
-  .resume .resume-container #page-wrapper #experience h2 {
-    font-size: 2em;
-    padding-bottom: 5px;
-    margin-bottom: 0;
-    margin-top: 10px;
-  }
-  .resume .resume-container #page-wrapper #experience .history .company {
-    padding-left: 40px;
-    font-style: italic;
-  }
-  .resume .resume-container #page-wrapper #experience .history .title {
-    margin-bottom: 10px;
-    padding-top: 5px;
-    color: black;
-    font-weight: 700;
-    text-align: center;
-  }
-  .resume .resume-container #page-wrapper #profile {
-    margin-top: 5px;
-    width: 45%;
-    box-shadow: 4px 7px 10px grey;
-  }
-  .resume .resume-container #page-wrapper #profile h2 {
-    font-weight: 700;
-    color: black;
-  }
-  .resume .resume-container #page-wrapper #profile p {
-    color: black;
-  }
-  .resume .bottom-resume-section {
-    width: 86%;
-    background-color: white;
-  }
-  .resume .bottom-resume-section #education {
-    padding: 0 35px 40px 35px;
-    text-align: left;
-  }
-  .resume .bottom-resume-section #education h2 {
-    font-size: 2em;
-    font-weight: 700;
-    padding-bottom: 5px;
-    margin-bottom: 0;
-    margin-top: 0;
-    color: black;
-  }
-  .resume .bottom-resume-section #education h3 .program {
-    font-style: italic;
-  }
-  .resume .bottom-resume-section #education .school {
-    padding-left: 40px;
-    color: black;
-  }
-  .resume .bottom-resume-section #education ul {
-    padding-left: 60px;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

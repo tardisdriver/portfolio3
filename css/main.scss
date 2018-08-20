@@ -25,6 +25,13 @@ $secondary-font: "Montserrat", sans-serif;
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
+@mixin fade-in() {
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  transition: opacity 2s ease-in;
+}
 %main-formatting {
   height: 100%;
   margin: 0;
@@ -80,13 +87,16 @@ button {
   }
 }
 .nav-menu {
-  height: 50px;
+  // height: 50px;
+  // height: 3.5rem;
+  font-size: 0.8rem;
   background-color: black;
   .nav {
     @extend %flex-row;
-    justify-content: flex-end;
+    // justify-content: flex-end;
     list-style: none;
-    height: 50px;
+    // height: 50px;
+    // height: 3.5rem;
   }
   #cta {
     background-color: rgba(53, 170, 53, 0.5);
@@ -106,8 +116,8 @@ button {
   }
 }
 .logo {
-  width: 15%;
-  height: 15%;
+  // width: 15%;
+  width: 13rem;
 }
 #footer {
   width: 100%;
@@ -125,39 +135,42 @@ button {
     display: flex;
     height: 60vh;
     #canvasOne {
-      z-index: 0;
+      display: none;
+      // z-index: 0;
     }
     .introduction {
       background-color: black;
-      float: right;
+      // float: right;
       color: white;
-      min-width: 23%;
+      // min-width: 23%;
       text-align: center;
-      padding-right: 120px;
-      padding-top: 100px;
+      // padding-right: 120px;
+      // padding-top: 100px;
+      padding-top: 5rem;
       h2 {
-        font-size: 2.4em;
+        font-size: 2.4rem;
       }
       h3 {
-        font-size: 1.5em;
+        font-size: 1.5rem;
       }
     }
   }
   .social {
-    margin-top: 10px;
+    // margin-top: 10px;
     .social-list {
       @extend %flex-row;
       clear: both;
       justify-content: center;
       list-style: none;
-      margin-bottom: 150px;
+      flex-wrap: wrap;
+      padding: 0;
+      // margin-bottom: 150px;
       .social-btn {
-        width: 200px;
-        height: 50px;
-        font-size: 1.8em;
+        width: 15rem;
+        font-size: 1.8rem;
         border: 0.5px solid black;
         box-shadow: 0px 0px 10px #fff;
-        margin: 0 15px;
+        margin: 4px;
         .fab {
           padding-right: 16px;
         }
@@ -168,7 +181,80 @@ button {
     }
   }
 }
+/* ---- Project Page ----*/
+.main-content {
+  margin-bottom: 10px;
+  .page-header {
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+    padding: 10px;
+  }
+  .project {
+    // height: 450px;
+    color: white;
+    margin: 0 0 0 2rem;
+    h3 {
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+    .project-area {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .project-left {
+        display: flex;
+        flex-direction: column;
+        max-width: 20rem;
+        // height: 300px;
+        align-items: center;
+        .thumbnail {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        .proj-button {
+          background-color: #015152;
+          width: 14rem;
+          margin-bottom: 8px;
+          border-radius: 2px;
+          font-size: 0.7em;
+          text-align: center;
+          padding: 5px 0;
+        }
+        .proj-button:hover {
+          background-color: #029597;
+        }
 
+        a {
+          color: white;
+          text-decoration: none;
+        }
+        a:visited {
+          color: white;
+        }
+      }
+    }
+    .project-right {
+      display: flex;
+      flex-direction: column;
+      // height: 300px;
+      max-width: 25rem;
+      // margin-left: 100px;
+      padding-top: 4px;
+      span {
+        font-size: 1rem;
+      }
+      .stack {
+        padding-top: 10px;
+        font-size: 1.2rem;
+        span.btn {
+          padding: 2px 3px;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
 /* ---- Hire Page ---- */
 .main-content {
   .contact {
@@ -178,6 +264,44 @@ button {
     p {
       color: white;
       padding-top: 0;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    .contact-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      #my-email {
+        height: 1.4rem;
+      }
+      #cp-btn {
+        padding: 0 0.7rem;
+        font-size: 1rem;
+        margin-left: 5px;
+      }
+      .tooltip {
+        margin: 0;
+        .tooltip-arrow {
+          display: none;
+        }
+        .tooltip-inner {
+          background-color: #767676;
+          padding: 5px 3px;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .avail {
+      padding-top: 15px;
+      ul {
+        text-align: left;
+        padding-left: 20px;
+        li {
+          font-size: 1rem;
+          color: white;
+        }
+      }
     }
   }
   .resume {
@@ -189,18 +313,23 @@ button {
       color: white;
       padding-top: 0px;
     }
+    h2 {
+      font-size: 2rem;
+    }
     .resume-container {
       margin-top: 10px;
       align-self: center;
       height: auto;
-      width: 85vw;
+      // width: 85vw;
+      width: 31rem;
       background-color: white;
       #name {
         font-family: $secondary-font;
         text-align: left;
-        font-size: 3.5em;
+        font-size: 2.5rem;
         font-weight: 700;
-        padding: 20px 20px 0 20px;
+        // padding: 20px 20px 0 20px;
+        padding: 1rem 0 0 1rem;
         background-color: lightgray;
         @extend %text-format;
         .my-title {
@@ -209,11 +338,18 @@ button {
       }
       #page-wrapper {
         display: flex;
+        flex-wrap: wrap;
         #profile {
-          padding: 0px;
-          background-color: lightgray;
-          margin: 0 10px;
-          border-radius: 5px;
+          display: none;
+          // padding: 0px;
+          // background-color: lightgray;
+          // // margin: 0 10px;
+          // border-radius: 5px;
+          // max-width: 100%;
+          h2 {
+            color: black;
+            font-size: 2rem;
+          }
           #col-2 {
             width: 400px;
             overflow: hidden;
@@ -227,7 +363,8 @@ button {
           }
         }
         #experience {
-          padding: 20px;
+          // padding: 20px;
+          padding: 0 1.4rem;
           text-align: left;
           h2,
           h3 {
@@ -237,42 +374,86 @@ button {
           h2 {
             font-weight: 700;
             margin-bottom: 0;
+            margin-top: 0;
+            font-size: 2rem;
           }
           hr {
             margin: 10px auto;
+          }
+          .history {
+            h3 {
+              font-size: 1rem;
+              p {
+                font-size: 1.7rem;
+                text-align: center;
+              }
+            }
+            ul {
+              font-size: 1rem;
+              padding-left: 2rem;
+            }
+            span,
+            p {
+              color: black;
+            }
           }
         }
-        #education {
-          padding: 20px;
-          text-align: left;
-          h2 {
-            font-weight: 700;
-            margin-bottom: 0;
-          }
-          hr {
-            margin: 10px auto;
-          }
+      }
+    }
+    .bottom-resume-section {
+      background-color: white;
+      margin-top: 0;
+      #education {
+        padding: 20px;
+        text-align: left;
+        h2 {
+          font-weight: 700;
+          margin-bottom: 0;
+          color: black;
+          font-size: 2rem;
+          margin-top: 0;
+        }
+        h3 {
+          font-size: 1.4rem;
+        }
+        .school {
+          color: black;
+          font-size: 1rem;
+          margin-left: 1rem;
+          margin-bottom: 3px;
+        }
+        hr {
+          display: none;
+          // margin: 10px auto;
+        }
+        ul {
+          margin-left: 2rem;
           li {
-            margin-left: 40px;
+            font-size: 1rem;
           }
-          .program {
-            font-size: 0.8em;
-          }
+        }
+        .program {
+          font-size: 0.8em;
         }
       }
     }
   }
   .about-me {
     color: white;
-    padding: 50px;
-    font-size: 1.3em;
-    margin: 0 100px;
+    // padding: 50px;
+    font-size: 1.3rem;
+    // margin: 0 100px;
+    // margin: 2rem;
+    padding: 3rem;
+    h2 {
+      font-size: 2rem;
+    }
     .about-image {
       display: block;
       //   border-radius: 5px;
       margin-left: auto;
       margin-right: auto;
-      width: 30%;
+      width: 26rem;
     }
     figure {
       .figure-caption {
@@ -285,10 +466,10 @@ button {
   }
   #headshot {
     display: block;
-    margin-right: 10%;
+    margin-right: 4rem;
     margin-left: 15px;
-    margin-top: 100px;
-    width: 15%;
+    margin-top: 12rem;
+    width: 12rem;
     border-radius: 250px;
     float: right;
     clear: both;
@@ -298,166 +479,167 @@ button {
     padding-top: 17px;
   }
 }
-@media only screen and (min-width: 700px) {
-  .nav-menu {
-    .nav {
-      .nav-item {
-        cursor: default;
-      }
-    }
-  }
-  .main-content {
-    .contact {
-      .contact-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-      }
-      p {
-        margin: 3px 10px;
-      }
-      button {
-        display: inline-block;
-        border-radius: 6px;
-        padding: 0 6px;
-      }
-    }
-    h2 {
-      color: white;
-      padding: 15px;
-    }
-    .project {
-      height: 450px;
-      color: white;
-      margin: 0 0 0 70px;
-      .project-area {
-        display: flex;
-        flex-wrap: wrap;
-        .project-left {
-          display: flex;
-          flex-direction: column;
-          max-width: 33%;
-          height: 300px;
-          align-items: center;
-          .thumbnail {
-            width: 100%;
-          }
-          .proj-button {
-            background-color: #015152;
-            width: 255px;
-            margin-bottom: 8px;
-            border-radius: 3px;
-            font-size: 1.3em;
-            text-align: center;
-            padding: 5px 0;
-          }
-          .proj-button:hover {
-            background-color: #029597;
-          }
+// @media only screen and (min-width: 700px) {
+//   .nav-menu {
+//     .nav {
+//       .nav-item {
+//         cursor: default;
+//       }
+//     }
+//   }
+//   .main-content {
+//     .contact {
+//       .contact-info {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: center;
+//       }
+//       p {
+//         margin: 3px 10px;
+//       }
+//       button {
+//         display: inline-block;
+//         border-radius: 6px;
+//         padding: 0 6px;
+//       }
+//     }
+//     h2 {
+//       color: white;
+//       padding: 15px;
+//     }
+//     .project {
+//       height: 450px;
+//       color: white;
+//       margin: 0 0 0 70px;
+//       .project-area {
+//         display: flex;
+//         flex-wrap: wrap;
+//         .project-left {
+//           display: flex;
+//           flex-direction: column;
+//           max-width: 33%;
+//           height: 300px;
+//           align-items: center;
+//           .thumbnail {
+//             width: 100%;
+//           }
+//           .proj-button {
+//             background-color: #015152;
+//             width: 255px;
+//             margin-bottom: 8px;
+//             border-radius: 3px;
+//             font-size: 1.3em;
+//             text-align: center;
+//             padding: 5px 0;
+//           }
+//           .proj-button:hover {
+//             background-color: #029597;
+//           }
 
-          a {
-            color: white;
-            text-decoration: none;
-          }
-          a:visited {
-            color: white;
-          }
-        }
-      }
-      .project-right {
-        display: flex;
-        flex-direction: column;
-        height: 300px;
-        max-width: 40%;
-        margin-left: 100px;
-        padding-top: 40px;
-        .stack {
-          padding-top: 35px;
-          .btn {
-            padding: 2px 4px;
-          }
-        }
-      }
-    }
-  }
-  .resume {
-    .res-buttons {
-      display: flex;
-    }
-    .resume-container {
-      height: 1010px;
-      border-radius: 0;
-      .top-resume-section {
-        height: 839px;
-      }
-      #name {
-        padding-left: 30px;
-      }
-      #page-wrapper {
-        display: flex;
-        #experience {
-          padding: 0px 35px;
-          h2 {
-            font-size: 2em;
-            padding-bottom: 5px;
-            margin-bottom: 0;
-            margin-top: 10px;
-          }
-          .history {
-            .company {
-              padding-left: 40px;
-              font-style: italic;
-            }
-            .title {
-              margin-bottom: 10px;
-              padding-top: 5px;
-              color: black;
-              font-weight: 700;
-              text-align: center;
-            }
-          }
-        }
-        #profile {
-          margin-top: 5px;
-          width: 45%;
-          box-shadow: 4px 7px 10px grey;
-          h2 {
-            font-weight: 700;
-            color: black;
-          }
-          p {
-            color: black;
-          }
-        }
-      }
-    }
-    .bottom-resume-section {
-      width: 86%;
-      background-color: white;
-      #education {
-        padding: 0 35px 40px 35px;
-        text-align: left;
-        h2 {
-          font-size: 2em;
-          font-weight: 700;
-          padding-bottom: 5px;
-          margin-bottom: 0;
-          margin-top: 0;
-          color: black;
-        }
-        h3 {
-          .program {
-            font-style: italic;
-          }
-        }
-        .school {
-          padding-left: 40px;
-          color: black;
-        }
-        ul {
-          padding-left: 60px;
-        }
-      }
-    }
-  }
-}
+//           a {
+//             color: white;
+//             text-decoration: none;
+//           }
+//           a:visited {
+//             color: white;
+//           }
+//         }
+//       }
+//       .project-right {
+//         display: flex;
+//         flex-direction: column;
+//         height: 300px;
+//         max-width: 40%;
+//         margin-left: 100px;
+//         padding-top: 40px;
+//         .stack {
+//           padding-top: 35px;
+//           .btn {
+//             padding: 2px 4px;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .resume {
+//     .res-buttons {
+//       display: flex;
+//     }
+//     .resume-container {
+//       height: 1010px;
+//       border-radius: 0;
+//       .top-resume-section {
+//         height: 839px;
+//       }
+//       #name {
+//         padding-left: 30px;
+//       }
+//       #page-wrapper {
+//         display: flex;
+//         #experience {
+//           padding: 0px 35px;
+//           h2 {
+//             font-size: 2em;
+//             padding-bottom: 5px;
+//             margin-bottom: 0;
+//             margin-top: 10px;
+//           }
+//           .history {
+//             .company {
+//               padding-left: 40px;
+//               font-style: italic;
+//             }
+//             .title {
+//               margin-bottom: 10px;
+//               padding-top: 5px;
+//               color: black;
+//               font-weight: 700;
+//               text-align: center;
+//             }
+//           }
+//         }
+//         #profile {
+//           margin-top: 5px;
+//           width: 45%;
+//           box-shadow: 4px 7px 10px grey;
+//           h2 {
+//             font-weight: 700;
+//             color: black;
+//           }
+//           p {
+//             color: black;
+//           }
+//         }
+//       }
+//     }
+//     .bottom-resume-section {
+//       width: 86%;
+//       background-color: white;
+//       margin-top: 0;
+//       #education {
+//         padding: 0 35px 40px 35px;
+//         text-align: left;
+//         h2 {
+//           font-size: 2em;
+//           font-weight: 700;
+//           padding-bottom: 5px;
+//           margin-bottom: 0;
+//           margin-top: 0;
+//           color: black;
+//         }
+//         h3 {
+//           .program {
+//             font-style: italic;
+//           }
+//         }
+//         .school {
+//           padding-left: 40px;
+//           color: black;
+//         }
+//         ul {
+//           padding-left: 60px;
+//         }
+//       }
+//     }
+//   }
+// }
