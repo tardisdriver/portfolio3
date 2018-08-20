@@ -103,7 +103,7 @@ button a {
 }
 #footer .copyright {
   color: white;
-  font-size: 1em;
+  font-size: 0.7em;
 }
 
 .main-content {
@@ -158,7 +158,7 @@ button a {
   font-size: 2rem;
   color: white;
   margin: 0;
-  padding: 10px;
+  padding: 25px 0 0 30px;
 }
 .main-content .project {
   color: white;
@@ -215,7 +215,8 @@ button a {
   padding-top: 10px;
   font-size: 1.2rem;
 }
-.main-content .project .project-right .stack span.btn {
+.main-content .project .project-right .stack a.btn {
+  margin: 2px 0;
   padding: 2px 3px;
   font-size: 0.9rem;
 }
@@ -284,7 +285,7 @@ button a {
   margin-top: 10px;
   align-self: center;
   height: auto;
-  width: 31rem;
+  width: 85vw;
   background-color: white;
 }
 .main-content .resume .resume-container #name {

@@ -124,7 +124,7 @@ button {
   text-align: center;
   .copyright {
     color: white;
-    font-size: 1em;
+    font-size: 0.7em;
   }
 }
 
@@ -188,7 +188,7 @@ button {
     font-size: 2rem;
     color: white;
     margin: 0;
-    padding: 10px;
+    padding: 25px 0 0 30px;
   }
   .project {
     // height: 450px;
@@ -247,7 +247,8 @@ button {
       .stack {
         padding-top: 10px;
         font-size: 1.2rem;
-        span.btn {
+        a.btn {
+          margin: 2px 0;
           padding: 2px 3px;
           font-size: 0.9rem;
         }
@@ -320,8 +321,8 @@ button {
       margin-top: 10px;
       align-self: center;
       height: auto;
-      // width: 85vw;
-      width: 31rem;
+      width: 85vw;
+      // width: 31rem;
       background-color: white;
       #name {
         font-family: $secondary-font;

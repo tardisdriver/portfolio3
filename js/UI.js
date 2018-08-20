@@ -24,14 +24,25 @@ $(document).ready(function() {
   });
 });
 
-let o = "font-family: Helvetica, Arial, sans-serif",
-  r = o + "; font-size:32px; line-height: 1.5; color: #fff",
-  a = r + "; background-color: #8000ff; padding: 4px 220px 4px 0",
-  l = o + "; font-size:14px; line-height: 1.15rem",
-  c = l + "; text-decoration: underline",
-  u = "";
+// let o = "font-family: Helvetica, Arial, sans-serif",
+//   x = "font-family: 'Brush Script MT',cursive";
+// (r = x + "; font-size:30px; line-height: 1.2; color: #fff"),
+//   (a = r + "; background-color: #8000ff; padding: 2px 0"),
+//   (l = o + "; font-size:18px; line-height: 1.15rem"),
+//   (c = l + "; text-decoration: underline"),
+//   (u = "");
+let h =
+    "font-family: 'Brush Script MT',cursive; font-size:40px; color:#fff; border-radius:2px;background-color: #8000ff; padding: 2px; margin-bottom:4px;",
+  i = "font-family: Helvetica, Arial, sans-serif; font-size:20px;",
+  j =
+    "font-family: Impact, sans serif; color:#fff; font-size:34px; border-radius:2px;background-color: #8000ff; padding: 2px;",
+  k = "font-family: Helvetica, Arial, sans-serif; font-size:20px;";
 
 window.console.log(
-  "\n%cDesign is a funny word. Some people think design means how it looks. But of course, if you dig deeper, it's really how it works. - Steve Jobs",
-  a
+  "\n%cDesign%c is a funny word. \nSome people think design means how it looks. \nBut of course, if you dig deeper, it's really how it %cworks%c. - Steve Jobs %c(https://www.wired.com/1996/02/jobs-2/)",
+  h,
+  i,
+  j,
+  i,
+  k
 );
