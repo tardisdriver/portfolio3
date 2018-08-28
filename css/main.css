@@ -36,11 +36,11 @@ html {
 body {
   background: #1e5799;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 30%, #000000 100%);
+  background: -moz-linear-gradient(top, #1e35b5 0%, #ff5e00 80%, #000 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #1e5799 0%, #2989d8 30%, #000000 100%);
+  background: -webkit-linear-gradient(top, #1e35b5 0%, #ff5e00 80%, #000 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #1e5799 0%, #2989d8 30%, #000000 100%);
+  background: linear-gradient(to bottom, #1e35b5 0%, #ff5e00 80%, #000 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1e5799", endColorstr="#000000",GradientType=0 );
   /* IE6-9 */
@@ -74,6 +74,7 @@ button a {
   background-color: black;
 }
 .nav-menu .nav {
+  background-color: black;
   list-style: none;
 }
 .nav-menu #cta {
@@ -113,18 +114,19 @@ button a {
 .main-content .intro-container {
   display: flex;
   height: 60vh;
-}
-.main-content .intro-container #canvasOne {
-  display: none;
+  background-image: url("../images/waves.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main-content .intro-container .introduction {
-  background-color: black;
   color: white;
   text-align: center;
-  padding-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
 }
 .main-content .intro-container .introduction h2 {
-  font-size: 2.4rem;
+  font-size: 3.5rem;
 }
 .main-content .intro-container .introduction h3 {
   font-size: 1.5rem;
@@ -137,16 +139,21 @@ button a {
   padding: 0;
 }
 .main-content .social .social-list .social-btn {
-  width: 15rem;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   border: 0.5px solid black;
-  box-shadow: 0px 0px 10px #fff;
   margin: 4px;
+  padding-top: 15px;
+}
+.main-content .social .social-list .social-btn a:visited {
+  color: white;
+  text-decoration: none;
 }
 .main-content .social .social-list .social-btn .fab {
-  padding-right: 16px;
+  padding-right: 13px;
 }
-.main-content .social .social-list #github {
+.main-content .social .social-list #github,
+.main-content .social .social-list #twitter,
+.main-content .social .social-list #linkedin {
   background-color: black;
 }
 
@@ -161,6 +168,9 @@ button a {
   padding: 25px 0 0 30px;
 }
 .main-content .project {
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
   color: white;
   margin: 0 0 0 2rem;
 }
@@ -286,6 +296,7 @@ button a {
   align-self: center;
   height: auto;
   width: 85vw;
+  max-width: 700px;
   background-color: white;
 }
 .main-content .resume .resume-container #name {
@@ -295,6 +306,9 @@ button a {
   font-weight: 700;
   padding: 1rem 0 0 1rem;
   background-color: lightgray;
+}
+.main-content .resume .resume-container #name .my-title {
+  text-align: center;
 }
 .main-content .resume .resume-container #page-wrapper {
   display: flex;
@@ -342,6 +356,10 @@ button a {
 .main-content .resume .resume-container #page-wrapper #experience .history h3 p {
   font-size: 1.7rem;
   text-align: center;
+}
+.main-content .resume .resume-container #page-wrapper #experience .history h3 .company {
+  font-style: italic;
+  padding-left: 10px;
 }
 .main-content .resume .resume-container #page-wrapper #experience .history ul {
   font-size: 1rem;
@@ -419,6 +437,146 @@ button a {
 }
 .main-content p {
   padding-top: 17px;
+}
+
+@media only screen and (min-width: 414px) {
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media only screen and (min-width: 414px) {
+  .avail {
+    max-width: 354px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 475px) {
+  .project-right {
+    padding-left: 20px;
+  }
+}
+@media only screen and (min-width: 642px) {
+  .logo {
+    width: 20rem;
+  }
+
+  .main-content .social {
+    max-width: 631px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main-content .contact h2 {
+    font-size: 3rem;
+  }
+  .main-content .contact .avail {
+    max-width: 555px;
+  }
+  .main-content .contact .avail p {
+    font-size: 1.7rem;
+  }
+  .main-content .contact .avail ul li {
+    font-size: 1.7rem;
+  }
+  .main-content .contact .contact-info {
+    font-size: 2rem;
+  }
+  .main-content .contact .contact-info .cp-btn {
+    font-size: 1.3rem;
+  }
+  .main-content .resume h2 {
+    font-size: 3rem;
+  }
+  .main-content .resume .resume-container #name .my-title {
+    font-size: 1.8rem;
+  }
+  .main-content .resume .resume-container .top-resume-section #page-wrapper #experience .history h3 {
+    font-size: 1.7rem;
+  }
+  .main-content .resume .resume-container .top-resume-section #page-wrapper #experience .history h3 .title {
+    font-size: 2rem;
+  }
+  .main-content .resume .resume-container .top-resume-section #page-wrapper #experience .history h3 ul {
+    font-size: 1.3rem;
+  }
+  .main-content .resume .bottom-resume-section #education h3 {
+    font-size: 1.7rem;
+  }
+  .main-content .resume .bottom-resume-section #education .school {
+    font-size: 1.7rem;
+  }
+  .main-content .resume .bottom-resume-section #education ul li {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .main-content .social {
+    max-width: 633px;
+  }
+  .main-content .resume .top-resume-section {
+    padding-left: 30px;
+  }
+  .main-content .resume .bottom-resume-section {
+    padding-left: 30px;
+  }
+}
+@media only screen and (min-width: 925px) {
+  .logo {
+    width: 27rem;
+  }
+
+  .nav-menu {
+    font-size: 1.3rem;
+  }
+
+  .main-content .intro-container .introduction {
+    padding-top: 8rem;
+  }
+  .main-content .intro-container .introduction h2 {
+    font-size: 6.5rem;
+  }
+  .main-content .intro-container .introduction h3 {
+    font-size: 2.5rem;
+  }
+  .main-content .page-header {
+    font-size: 4rem;
+    border-bottom: none;
+  }
+  .main-content .project {
+    max-width: 80rem;
+    padding-left: 60px;
+  }
+  .main-content .project h3 {
+    font-size: 2rem;
+  }
+  .main-content .project .project-area .project-left .proj-button {
+    font-size: 1.5rem;
+    width: 20rem;
+  }
+  .main-content .project .project-area .project-right {
+    max-width: 50rem;
+  }
+  .main-content .project .project-area .project-right span,
+.main-content .project .project-area .project-right .stack a {
+    font-size: 1.5rem;
+  }
+  .main-content .social .social-list .social-btn {
+    font-size: 2.5rem;
+    margin-right: 35px;
+  }
+  .main-content .about-me {
+    font-size: 2rem;
+  }
+  .main-content .about-me .about-image {
+    width: 40rem;
+  }
+  .main-content .about-me figure .figure-caption {
+    font-size: 1.7rem;
+  }
+  .main-content #headshot {
+    width: 25rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
