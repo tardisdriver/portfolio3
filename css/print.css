@@ -8,14 +8,16 @@
   }
   body {
     font-family: "Ubuntu", sans-serif;
-    margin: 1.6cm;
+    margin: 1.1cm;
   }
   #return {
-    display:none;
+    display: none;
   }
   #experience {
     padding-top: 10px;
-    width: 400px;
+    width: 450px;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   #experience,
   #education {
@@ -24,7 +26,7 @@
   }
   #education {
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 50px;
   }
   #experience h2,
   h3 {

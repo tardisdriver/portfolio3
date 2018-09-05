@@ -25,6 +25,7 @@ $(document).ready(function() {
   }
 });
 
+// Console Quote
 let h =
     "font-family: 'Brush Script MT',cursive; font-size:40px; color:#034dc4;",
   i = "font-family: Helvetica, Arial, sans-serif; font-size:18px;",
